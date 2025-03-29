@@ -196,3 +196,40 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+function calcularBTU() {
+  // Obter a área inserida pelo usuário
+  const area = parseFloat(document.getElementById('area').value);
+
+  // Calcular os BTUs necessários
+  const btuNecessarios = area * 600; // A média seria entre 600 a 800 BTUs por m²
+
+  // Exibir os BTUs necessários
+  document.getElementById('resultado').innerHTML = `Você precisa de ${btuNecessarios} BTUs para o seu ambiente.`;
+
+  // Sugerir o modelo de ar condicionado adequado
+  sugerirArCondicionado(btuNecessarios);
+}
+
+function sugerirArCondicionado(btuNecessarios) {
+  // Lista de modelos de ar condicionado com a potência em BTUs
+  const modelos = [
+      { modelo: "Ar Condicionado 7.500 BTUs", btu: 7500 },
+      { modelo: "Ar Condicionado 9.000 BTUs", btu: 9000 },
+      { modelo: "Ar Condicionado 12.000 BTUs", btu: 12000 },
+      { modelo: "Ar Condicionado 18.000 BTUs", btu: 18000 },
+      { modelo: "Ar Condicionado 24.000 BTUs", btu: 24000 }
+  ];
+
+  // Encontrar o modelo mais adequado
+  let modeloRecomendado = "Não há modelo adequado para essa necessidade.";
+  for (let i = 0; i < modelos.length; i++) {
+      if (btuNecessarios <= modelos[i].btu) {
+          modeloRecomendado = modelos[i].modelo;
+          break;
+      }
+  }
+
+  // Exibir o modelo recomendado
+  document.getElementById('modelo-recomendado').innerHTML = modeloRecomendado;
+}
