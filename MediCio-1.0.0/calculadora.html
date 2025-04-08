@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de BTUs - SP Clima</title>
+  <link rel="stylesheet" href="assets/css/btus.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+  <!-- Parallax de capa -->
+  <section class="parallax capa">
+    <div class="overlay">
+      <h1><i class="fa-solid fa-snowflake"></i> Calculadora de BTUs</h1>
+      <p>Descubra qual ar-condicionado é ideal para o seu ambiente</p>
+    </div>
+  </section>
+
+  <!-- Formulário -->
+  <section class="form-section">
+    <form id="btuForm">
+      <label for="metros"><i class="fa-solid fa-ruler-combined"></i> Tamanho do cômodo (m²):</label>
+      <input type="number" id="metros" name="metros" required>
+
+      <label for="pessoas"><i class="fa-solid fa-user-group"></i> Quantidade de pessoas:</label>
+      <input type="number" id="pessoas" name="pessoas" required>
+
+      <label for="janelas"><i class="fa-solid fa-window-maximize"></i> Quantidade de janelas:</label>
+      <input type="number" id="janelas" name="janelas" required>
+
+      <label for="sol"><i class="fa-solid fa-sun"></i> O ambiente pega sol direto?</label>
+      <select id="sol" name="sol">
+        <option value="nao">Não</option>
+        <option value="sim">Sim</option>
+      </select>
+
+      <button type="submit"><i class="fa-solid fa-calculator"></i> Calcular</button>
+    </form>
+
+    <div id="resultado" class="resultado"></div>
+    <div id="whatsappBtn" style="display: none;">
+      <a id="whatsappLink" target="_blank">
+        <button class="zap">
+          <i class="fa-brands fa-whatsapp"></i> Enviar resultado por WhatsApp
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Parallax final -->
+  <section class="parallax fundo">
+    <div class="overlay">
+      <h2><i class="fa-solid fa-wind"></i> Mais conforto, menos preocupação</h2>
+    </div>
+  </section>
+
+  <script src="assets/js/btus.js"></script>
+</body>
+</html>

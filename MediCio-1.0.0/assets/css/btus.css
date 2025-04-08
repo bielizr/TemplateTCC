@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3f9ff;
+    color: #333;
+  }
+  
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .capa {
+    background-image: ;
+  }
+  
+  .fundo {
+    background-image: url('https://images.unsplash.com/photo-1602524818305-b5da6fb7c2cd');
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .form-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 12px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  
+  .zap {
+    margin-top: 20px;
+    background-color: #25d366;
+  }
+  
+  .zap:hover {
+    background-color: #1ebf5b;
+  }
+  
+  .resultado {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
